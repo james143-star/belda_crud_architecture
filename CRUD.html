@@ -1,0 +1,158 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-image: url(black.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+
+    <!-- this block is for the navbar -->
+    <div class="navbar navbar-dark bg-dark">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+            <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                    aria-controls="contact" aria-selected="false">create</a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                    aria-selected="true">update</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                    aria-controls="profile" aria-selected="false">delete</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#display" role="tab"
+                    aria-controls="contact" aria-selected="false">display</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- this block if for the form or input field -->
+    <center>
+        <div class="tab-content" style="margin-top: 50px;" id="myTabContent">
+
+
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+                <div class="col-sm-3" style="background-color: aqua;">
+                    <form method='get' action='create_save.php'>
+
+                        <!-- for create form -->
+                        <div class="form-group">
+                            <p>Please fill in the said requirements!!!</p>
+                            <label for="exampleInputEmail1">Username</label>
+                            <input class="form-control" type='text' name='thisUser'><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">password</label>
+                            <input class="form-control" type='password' name='thisPass'><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">status</label>
+                            <input class="form-control" type='status' name='thisstatus'><br>
+                        </div>
+                        <div class="form-group">
+                            <input class="btn btn-primary" type='submit' value='Register'>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+
+            <!-- for update form -->
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="col-sm-3" style="background-color: aqua;">
+                    <form method='get' action='update_save.php'>
+                        <div class="form-group">
+                            <p>choose the Username that you want to change its password!!!</p>
+                            <label for="exampleInputEmail1">Username to change</label>
+                            <input class="form-control" type='text' name='thisUser'><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">New Password</label>
+                            <input class="form-control" type='password' name='thisPass'><br>
+                        </div>
+                        <div class="form-group">
+                            <input class="btn btn-primary" type='submit' value='Update Password'>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- for the delete form -->
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="col-sm-3" style="background-color: aqua;">
+                    <form method='delete' action='delete.php'>
+                        <div class="form-group">
+                            <p>please fill in he Username that you want to delete in the database</p>
+                            <label for="exampleInputEmail1">Username</label>
+                            <input class="form-control" type='text' name='thisUser'><br>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" type='delete' value='Delete info'>delete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- for the display form -->
+            <div class="tab-pane fade" id="display" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="col-sm-3" style="background-color: aqua;">
+                    <form method='post' action='display_save.php'>
+                        Do you want to display the data? <br>
+                        <br>
+                        <br>
+                        <input class="btn btn-primary" type='submit' value='display'>
+                        <br>
+                        <br>
+
+                </div>
+            </div>
+            </form>
+        </div>
+        </div>
+
+
+
+
+        </div>
+    </center>
+
+    <script 
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        
+
+</body>
+
+</html>
